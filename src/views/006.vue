@@ -147,128 +147,142 @@ export default {
         }
       }
     },
-    fadeIn() {
-      //淡入 0 ~ 1
-      // console.log(111);
-      // console.log(document.getElementById("fireworks").style.opacity);
-      if (
-        document.getElementById("fireworks").style.opacity == 0 ||
-        document.getElementById("fireworks").style.opacity == ""
-      ) {
-        var sped = sped || 30; //默认速度为16.6ms
-        var num = 0; //累加器
-        var timer = setInterval(function () {
-          num++;
-          document.getElementById("fireworks").style.opacity = num / 20;
-          if (num >= 20) {
-            clearInterval(timer);
-          }
-        }, sped);
-      }
+    fireworksout() {
+      document.getElementById("fireworks").style.display = "none";
+      document.getElementById("fireworks1").classList.add("animate");
       setTimeout(() => {
-        var num1 = -120; //累加器
-        var timer1 = setInterval(function () {
-          console.log("上升");
-          num1 -= 10;
-          // console.log(num1);
-          document.getElementById("fireworks").style.top = num1 + "px";
-          if (num1 <= -350) {
-            clearInterval(timer1);
-          }
-        }, sped);
-      }, 1000);
-      setTimeout(() => {
-        var num2 = 30; //累加器
-        var num3 = 25; //累加器
-        var timer2 = setInterval(function () {
-          console.log("变大");
-          num2 += 13;
-          num3 += 10;
-          document.getElementById("fireworks").style.width = num2 + "px";
-          document.getElementById("fireworks").style.height = num3 + "px";
-          if (num2 >= 200) {
-            clearInterval(timer2);
-          }
-        }, sped);
-      }, 2000);
-      setTimeout(() => {
-        var num4 = 20; //累加器
-        var timer3 = setInterval(function () {
-          num4--;
-          document.getElementById("fireworks").style.opacity = num4 / 20;
-          if (num4 <= 0) {
-            clearInterval(timer3);
-          }
-        }, sped);
-      }, 2500);
-      setTimeout(() => {
-        var num5 = 0; //累加器
-        var timer4 = setInterval(function () {
-          num5++;
-          document.getElementById("fireworks").style.opacity = num5 / 20;
-          if (num5 >= 20) {
-            clearInterval(timer4);
-          }
-        }, sped);
-      }, 3000);
-      setTimeout(() => {
-        var num4 = 20; //累加器
-        var timer3 = setInterval(function () {
-          num4--;
-          document.getElementById("fireworks").style.opacity = num4 / 20;
-          if (num4 <= 0) {
-            clearInterval(timer3);
-          }
-        }, sped);
-      }, 3500);
-      setTimeout(() => {
-        var num5 = 0; //累加器
-        var timer4 = setInterval(function () {
-          num5++;
-          document.getElementById("fireworks1").style.opacity = num5 / 20;
-          if (num5 >= 20) {
-            clearInterval(timer4);
-          }
-        }, sped);
-      }, 4000);
-      setTimeout(() => {
-        var num4 = 20; //累加器
-        var timer3 = setInterval(function () {
-          num4--;
-          document.getElementById("fireworks1").style.opacity = num4 / 20;
-          if (num4 <= 0) {
-            clearInterval(timer3);
-          }
-        }, sped);
-      }, 4500);
-      setTimeout(() => {
-        var num5 = 0; //累加器
-        var timer4 = setInterval(function () {
-          num5++;
-          document.getElementById("fireworks2").style.opacity = num5 / 20;
-          if (num5 >= 20) {
-            clearInterval(timer4);
-          }
-        }, sped);
-      }, 4800);
-      setTimeout(() => {
-        var num4 = 20; //累加器
-        var timer3 = setInterval(function () {
-          num4--;
-          document.getElementById("fireworks2").style.opacity = num4 / 20;
-          if (num4 <= 0) {
-            clearInterval(timer3);
-          }
-        }, sped);
-      }, 5300);
+        document.getElementById("fireworks2").classList.add("animate1");
+      }, 600);
     },
+    firework1sout() {
+      document.getElementById("fireworks1").style.display = "none";
+    },
+    firework2sout() {
+      document.getElementById("fireworks1").style.display = "none";
+    },
+    // fadeIn() {
+    //   if (
+    //     document.getElementById("fireworks").style.opacity == 0 ||
+    //     document.getElementById("fireworks").style.opacity == ""
+    //   ) {
+    //     var sped = sped || 30; //默认速度为16.6ms
+    //     var num = 0; //累加器
+    //     var timer = setInterval(function () {
+    //       num++;
+    //       document.getElementById("fireworks").style.opacity = num / 20;
+    //       if (num >= 20) {
+    //         clearInterval(timer);
+    //       }
+    //     }, sped);
+    //   }
+    //   setTimeout(() => {
+    //     var num1 = -120; //累加器
+    //     var timer1 = setInterval(function () {
+    //       console.log("上升");
+    //       num1 -= 10;
+    //       // console.log(num1);
+    //       document.getElementById("fireworks").style.top = num1 + "px";
+    //       if (num1 <= -350) {
+    //         clearInterval(timer1);
+    //       }
+    //     }, sped);
+    //   }, 1000);
+    //   setTimeout(() => {
+    //     var num2 = 30; //累加器
+    //     var num3 = 25; //累加器
+    //     var timer2 = setInterval(function () {
+    //       console.log("变大");
+    //       num2 += 13;
+    //       num3 += 10;
+    //       document.getElementById("fireworks").style.width = num2 + "px";
+    //       document.getElementById("fireworks").style.height = num3 + "px";
+    //       if (num2 >= 200) {
+    //         clearInterval(timer2);
+    //       }
+    //     }, sped);
+    //   }, 2000);
+    //   setTimeout(() => {
+    //     var num4 = 20; //累加器
+    //     var timer3 = setInterval(function () {
+    //       num4--;
+    //       document.getElementById("fireworks").style.opacity = num4 / 20;
+    //       if (num4 <= 0) {
+    //         clearInterval(timer3);
+    //       }
+    //     }, sped);
+    //   }, 2500);
+    //   setTimeout(() => {
+    //     var num5 = 0; //累加器
+    //     var timer4 = setInterval(function () {
+    //       num5++;
+    //       document.getElementById("fireworks").style.opacity = num5 / 20;
+    //       if (num5 >= 20) {
+    //         clearInterval(timer4);
+    //       }
+    //     }, sped);
+    //   }, 3000);
+    //   setTimeout(() => {
+    //     var num4 = 20; //累加器
+    //     var timer3 = setInterval(function () {
+    //       num4--;
+    //       document.getElementById("fireworks").style.opacity = num4 / 20;
+    //       if (num4 <= 0) {
+    //         clearInterval(timer3);
+    //       }
+    //     }, sped);
+    //   }, 3500);
+    //   setTimeout(() => {
+    //     var num5 = 0; //累加器
+    //     var timer4 = setInterval(function () {
+    //       num5++;
+    //       document.getElementById("fireworks1").style.opacity = num5 / 20;
+    //       if (num5 >= 20) {
+    //         clearInterval(timer4);
+    //       }
+    //     }, sped);
+    //   }, 4000);
+    //   setTimeout(() => {
+    //     var num4 = 20; //累加器
+    //     var timer3 = setInterval(function () {
+    //       num4--;
+    //       document.getElementById("fireworks1").style.opacity = num4 / 20;
+    //       if (num4 <= 0) {
+    //         clearInterval(timer3);
+    //       }
+    //     }, sped);
+    //   }, 4500);
+    //   setTimeout(() => {
+    //     var num5 = 0; //累加器
+    //     var timer4 = setInterval(function () {
+    //       num5++;
+    //       document.getElementById("fireworks2").style.opacity = num5 / 20;
+    //       if (num5 >= 20) {
+    //         clearInterval(timer4);
+    //       }
+    //     }, sped);
+    //   }, 4800);
+    //   setTimeout(() => {
+    //     var num4 = 20; //累加器
+    //     var timer3 = setInterval(function () {
+    //       num4--;
+    //       document.getElementById("fireworks2").style.opacity = num4 / 20;
+    //       if (num4 <= 0) {
+    //         clearInterval(timer3);
+    //       }
+    //     }, sped);
+    //   }, 5300);
+    // },
   },
   mounted() {
     // console.log(111);
     // fireworks();
     setTimeout(() => {
-      this.fadeIn();
-    }, 1000);
+      // this.fadeIn();
+      this.fireworksout();
+    }, 2000);
+    setTimeout(() => {
+      this.firework1sout();
+    }, 4000);
   },
 };
 </script>
@@ -449,32 +463,93 @@ export default {
 }
 .fireworks {
   /* display: none; */
-  opacity: 0;
+  /* opacity: 0; */
   z-index: 25;
   width: 30px;
   height: 25px;
-  position: relative;
-  top: -120px;
+  position: absolute;
+  top: 80px;
+  animation: fire 2s linear 1 normal;
 }
 
+@keyframes fire {
+  0% {
+    transform: translateY(160px);
+  }
+  20% {
+    transform: translateY(0px);
+  }
+  40% {
+    transform: scale(5);
+  }
+  60% {
+    transform: scale(4);
+  }
+  80% {
+    transform: scale(5);
+  }
+  100% {
+    transform: scale(4);
+  }
+}
 .fireworks1 {
-  /* display: none; */
-  opacity: 0;
   z-index: 25;
   width: 140px;
   height: 100px;
+  transform: scale(0);
   position: relative;
   top: -520px;
   left: 110px;
 }
+.animate {
+  animation: fire1 1.6s linear 1 normal;
+}
+
+@keyframes fire1 {
+  0% {
+    transform: scale(0);
+  }
+  25% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  75% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
 .fireworks2 {
-  /* display: none; */
-  opacity: 0;
   z-index: 25;
   width: 140px;
   height: 100px;
+  transform: scale(0);
   position: relative;
   top: -450px;
   left: -180px;
+  /* animation: fire2 1.6s linear 1 normal; */
+}
+.animate1 {
+  animation: fire2 1.6s linear 1 normal;
+}
+@keyframes fire2 {
+  0% {
+    transform: scale(0);
+  }
+  25% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  75% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
 }
 </style>

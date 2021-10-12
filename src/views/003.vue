@@ -35,13 +35,28 @@
         </div>
         <div class="block3-3">
           <div class="block3-3-1">
-            <img class="qsimg" src="../assets/img/q1.png" alt="" />
+            <img
+              v-image-preview
+              class="qsimg"
+              src="../assets/img/q1.png"
+              alt=""
+            />
           </div>
           <div class="block3-3-2">
-            <img class="qsimg" src="../assets/img/q2.png" alt="" />
+            <img
+              v-image-preview
+              class="qsimg"
+              src="../assets/img/q2.png"
+              alt=""
+            />
           </div>
           <div class="block3-3-3">
-            <img class="qsimg" src="../assets/img/q3.png" alt="" />
+            <img
+              v-image-preview
+              class="qsimg"
+              src="../assets/img/q3.png"
+              alt=""
+            />
           </div>
         </div>
         <div class="block3-4">
@@ -96,6 +111,7 @@ export default {
       title1: "(1)  2轴基础梁（主体）工程量计量",
       title2: "(2)  2轴基础梁与ZJ2形成的三棱柱搭头",
       isTf: [],
+      timutrue: 0,
       finish: true,
       asw1: [
         {
@@ -176,6 +192,12 @@ export default {
       }
       this.finish = !this.finish;
       console.log(this.isTf);
+      for (var j = 0; j < this.isTf.length; j++) {
+        if (this.isTf[j] == 1) {
+          this.timutrue++;
+        }
+      }
+      console.log(this.timutrue);
       //清除定时器↓
       clearInterval(this.timer);
       this.timer = null;

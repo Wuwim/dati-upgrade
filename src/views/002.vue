@@ -76,7 +76,8 @@ export default {
     },
     click_btn: function (item, index) {
       var this_1 = this;
-      console.log(this_1);
+      console.log(index);
+      console.log(item);
       for (var i in this_1.arr) {
         if (i == index) {
           this_1.arr[i].checked = true;

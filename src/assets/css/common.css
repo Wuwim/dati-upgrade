@@ -52,6 +52,17 @@ body {
   position: absolute;
   top: 60px;
   left: 20px;
+  animation: cloudmove 10s linear infinite alternate;
+}
+
+@keyframes cloudmove {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(250px);
+  }
 }
 
 .cloud1 {
@@ -60,6 +71,17 @@ body {
   position: absolute;
   top: 30px;
   left: 280px;
+  animation: cloud1move 10s linear infinite alternate;
+}
+
+@keyframes cloud1move {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(-230px);
+  }
 }
 
 .block2 {

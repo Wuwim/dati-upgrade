@@ -33,15 +33,30 @@
           <br />
           <span>{{ qs2 }}</span>
         </div>
-        <div class="block3-3">
+         <div class="block3-3">
           <div class="block3-3-1">
-            <img class="qsimg" src="../assets/img/q1.png" alt="" />
+            <img
+              v-image-preview
+              class="qsimg"
+              src="../assets/img/q1.png"
+              alt=""
+            />
           </div>
           <div class="block3-3-2">
-            <img class="qsimg" src="../assets/img/q2.png" alt="" />
+            <img
+              v-image-preview
+              class="qsimg"
+              src="../assets/img/q2.png"
+              alt=""
+            />
           </div>
           <div class="block3-3-3">
-            <img class="qsimg" src="../assets/img/q3.png" alt="" />
+            <img
+              v-image-preview
+              class="qsimg"
+              src="../assets/img/q3.png"
+              alt=""
+            />
           </div>
         </div>
         <div class="block3-4">

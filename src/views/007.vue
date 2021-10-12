@@ -169,5 +169,14 @@ export default {
 .down {
   width: 21px;
   height: 17px;
+  animation: gonext 1s linear infinite alternate;
+}
+@keyframes gonext {
+  0% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 </style>

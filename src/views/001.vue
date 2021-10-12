@@ -45,7 +45,7 @@
 
 <script>
 import { Toast } from "mint-ui";
-import { cloud } from "../js/cloud";
+// import { cloud } from "../js/cloud";
 export default {
   data() {
     return {
@@ -54,7 +54,7 @@ export default {
     };
   },
   mounted() {
-    cloud();
+    // cloud();
   },
   methods: {
     goBack() {

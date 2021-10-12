@@ -27,6 +27,7 @@
     "postcss-pxtorem": "^5.0.0",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
+    "vue-directive-image-previewer": "^2.2.2",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
